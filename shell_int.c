@@ -143,4 +143,3 @@ char **acceptArgv(const char *argv)
 	free(buffer);
 	free(token);
 }
-
