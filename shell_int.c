@@ -9,6 +9,7 @@
 
 /* Function prototypes*/
 int createProcess(char *buffer);
+char **acceptArgv(const char *argv);
 
 
 /**
@@ -68,24 +69,12 @@ int main(void)
 */
 int createProcess(char *buffer)
 {
-	int i = 0, j = 0, pid, status;
+	int pid, status;
 	size_t  buffersize = 50;
-	char *str, *cmd[2];
-	/*char *env[] = {"HOME=/home/castorichy", (char *)0};*/
+	char *str;
+	char **brokenToken = malloc(sizeof(char *) * buffersize);
 
-	if (buffer != NULL)
-	{
-		str = malloc(sizeof(char) * buffersize);
-		while (buffer[i] != '\0' && buffer[i] != '\n')
-		{
-			str[j] = buffer[i];
-			i++;
-			j++;
-		}
-		str[j] = '\0';
-		cmd[0] = str;
-		cmd[1] = NULL;
-	}
+	brokenToken = acceptArgv(buffer);
 
 	pid = fork();
 	if (pid == -1)
@@ -96,7 +85,7 @@ int createProcess(char *buffer)
 	else if (pid == 0)
 	{
 		/* child */
-		if (execve(cmd[0], cmd, NULL) == -1)
+		if (execvp(brokenToken[0], brokenToken) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
@@ -111,12 +100,47 @@ int createProcess(char *buffer)
 
 	return (0);
 	free(str);
-	free(buffer)
+	free(buffer);
 }
 
 
 /**
- * 
+ * acceptArgv - accept arguments and removes delimiter characters
+ * @argv: argument in one string
+ *
+ * Return: argument list
 */
 
+char **acceptArgv(const char *argv)
+{
+	int j = 0;
+	char *buffer = strdup(argv);
+	size_t  buffersize = 50;
+	char *token, **buff_token;
+
+	if (!buffer)
+	{
+		return (NULL);
+	}
+
+	buff_token = malloc(sizeof(char) * buffersize);
+	token = malloc(sizeof(char) * buffersize);
+	if (!token)
+	{
+		return (NULL);
+	}
+
+	token = strtok(buffer, " \t\r\n\a");
+	while (token != NULL)
+	{
+		buff_token[j++] = token;
+		token++;
+		token = strtok(NULL, " \t\r\n\a");
+	}
+	buff_token[j] = NULL;
+
+	return (buff_token);
+	free(buffer);
+	free(token);
+}
 
