@@ -85,7 +85,7 @@ int createProcess(char *buffer)
 	else if (pid == 0)
 	{
 		/* child */
-		if (execvp(brokenToken[0], brokenToken) == -1)
+		if (execve(brokenToken[0], brokenToken, NULL) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
