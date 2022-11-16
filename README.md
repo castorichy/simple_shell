@@ -9,7 +9,7 @@
 
 ## Repository Description
 
-This repository contains the files to simulate a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell and It is made to carry out the  **0x16. C - Simple Shell** project at [Holberton School.](https://www.holbertonschool.com "Holberton School.")
+This repository contains the files to simulate a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell and It is made to carry out the  **0x16. C - Simple Shell** project at [ALX Africa School.](https://www.ALX Africaschool.com "ALX Africa School.")
 
 The predominantly used calls are **read**, **write**, **open**, **execve**, **exit**, **fflush**, **fork**, **free**, **malloc**, **getline**, **isatty**, **perror**, **strtok**, **wait**, and **waitpid**.
 
@@ -58,7 +58,7 @@ The next steps are a brief description about how the shell works:
 - Your programs and functions will be compiled with `gcc 4.8.4` using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
 - All your files should end with a new line
 - A `README.md` file, at the root of the folder of the project is mandatory
-- Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl") and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
+- Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/ALX Africaschool/Betty/blob/master/betty-style.pl "betty-style.pl") and [betty-doc.pl](https://github.com/ALX Africaschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
 - Your shell should not have any memory leaks
 - No more than 5 functions per file
 - All your header files should be include guarded
@@ -69,13 +69,13 @@ To run this shell with its respective commands its necessary to clone this repos
 - HTTPS:
 
 ```c
-git clone https://github.com/mecomonteshbtn/simple_shell.git
+git clone https://github.com/castorichy/simple_shell.git
 ```
 
 - SSH:
 
 ```
-git clone git@github.com:mecomonteshbtn/simple_shell.git
+git clone git@github.com:castorichy/simple_shell.git
 ```
 
 ## Compiling, Debugging and Runing
@@ -140,7 +140,7 @@ drwxrwxr-x 7 vagrant vagrant  4096 Apr  6 18:22 ..
 
 ```shell
 Hell_Shell>> pwd
-/home/vagrant/HOLBERTON/simple_shell
+/home/vagrant/ALX Africa/simple_shell
 ```
 - echo
 
@@ -153,7 +153,7 @@ Hello World
 ```shell
 Hell_Shell>> ^C
 Hell_Shell>> 
-vagrant@vagrant-ubuntu-trusty-64:~/HOLBERTON/simple_shell$ 
+vagrant@vagrant-ubuntu-trusty-64:~/ALX Africa/simple_shell$ 
 ```
 Node that in the second line the *Ctrl+C*  is typed
 
@@ -161,5 +161,5 @@ Node that in the second line the *Ctrl+C*  is typed
 
 ## Authors:
 
-- *Robinson Montes* - [@mecomonteshbtn](https://github.com/mecomonteshbtn) 
-- *Nicolás Zárate*  - [@Nicolanz](https://github.com/Nicolanz)
+- * Annette Adhiambo <annetaliya@gmail.com> < https://github.com/Annetaliya >
+- * Duncan Kipruto <castorichy@gmail.com> < https://github.com/Annetaliya >
