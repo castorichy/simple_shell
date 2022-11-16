@@ -59,4 +59,4 @@ char *_strcat(char *dest, char *src);
 
 /*============ END      ==============*/
 
-#endif /* _SHELL_H_ */
+#endif /* _SHELL_H_ header file for prototypes*/
